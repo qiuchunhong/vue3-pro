@@ -61,7 +61,9 @@ export default defineComponent({
       collapsed: false,
       menuWidth: "width:256px",
     });
-    const list = routes[0].children;
+    const list = routes[0].children.sort((a, b) => {
+      return a.meta.leval - b.meta.leval;
+    });
     // 菜单展开 || 折叠
     const toggleCollapsed = () => {
       state.collapsed = !state.collapsed;
@@ -69,7 +71,7 @@ export default defineComponent({
     };
     const router = useRouter();
     const menuSelect = ({ item, key, keyPath }) => {
-      console.log({ item, key, keyPath });
+      // console.log({ item, key, keyPath });
       const path = keyPath.join("/");
       router.push({ path: "/" + path });
     };

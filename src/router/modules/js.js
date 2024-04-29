@@ -3,6 +3,7 @@ export default {
   redirect: "js/requestAnimationFrame",
   meta: {
     title: "js相关",
+    leval: 3,
   },
   children: [
     {

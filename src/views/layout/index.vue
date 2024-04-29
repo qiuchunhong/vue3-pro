@@ -14,9 +14,14 @@ import leftMenu from "./components/leftMenu";
   display: flex;
   width: 100%;
   height: 100vh;
+  background: #f2f2f2;
 }
 .l-right {
-  padding-left: 16px;
+  margin: 10px;
+  padding: 10px;
   flex: 1;
+  overflow: auto;
+  background: #fff;
+  border-radius: 8px;
 }
 </style>
